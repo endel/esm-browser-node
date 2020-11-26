@@ -62,12 +62,12 @@ npm start
 cd webpack
 npm install
 npm start
+```
 
 **Error**
 
 ```
-...
 ERROR in ./node_modules/httpie/node/index.mjs 1:0-32
 Module not found: Error: Can't resolve 'https' in '/Users/endel/projects/esm-browser-node/webpack/node_modules/httpie/node'
-...
 ```
+
