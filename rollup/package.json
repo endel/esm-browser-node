@@ -1,0 +1,22 @@
+{
+  "private": true,
+  "name": "esm-browser-node",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "rollup src/index.js --format umd --name 'bundle' --file bundle.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@rollup/plugin-commonjs": "^16.0.0",
+    "@rollup/plugin-node-resolve": "^10.0.0",
+    "rollup": "^2.33.3"
+  },
+  "dependencies": {
+    "httpie": "^2.0.0-next.11"
+  }
+}

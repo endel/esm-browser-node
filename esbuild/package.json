@@ -1,0 +1,18 @@
+{
+  "name": "esm-browser-node",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "dependencies": {
+    "httpie": "^2.0.0-next.11"
+  },
+  "devDependencies": {
+    "esbuild": "^0.8.16"
+  },
+  "scripts": {
+    "start": "esbuild src/index.js --bundle",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC"
+}
