@@ -2,7 +2,7 @@
 
 > Is it possible to have an ESM module that works both on Node.js and in the browser??
 
-EXAMPLE: The `httpie` package specifies "browser" paths on its `package.json` multiple times, but frontend build tools don't seem to pick up the correct file - always selecting `node/index.mjs`.
+EXAMPLE: The `httpie` package specifies "browser" paths on its `package.json` multiple times, but frontend build tools don't seem to pick up the correct file - always selecting `node/index.mjs` (and failing because it has a built-in node dependency).
 
 <img src="screenshot.png?raw=1" />
 
