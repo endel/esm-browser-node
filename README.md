@@ -28,9 +28,7 @@ npm install
 npm run dev
 ```
 
-**Error**
-
-Try to load `node/index.mjs` (node version)
+**file included:** `node/index.mjs` ❌
 
 ```
 [vite] Dep optimization failed with error:
@@ -62,7 +60,7 @@ npm install
 npm start
 ```
 
-**Error**
+**file included:** `node/index.mjs` ❌
 
 ```
 [snowpack] node_modules/httpie/node/index.mjs
@@ -78,7 +76,7 @@ npm install
 npm start
 ```
 
-**Error**
+**file included:** `node/index.mjs` ❌
 
 ```
 ERROR in ./node_modules/httpie/node/index.mjs 1:0-32
@@ -96,6 +94,8 @@ npm start
 
 `esbuild` successfully uses the "/xhr/index.mjs" path!
 
+**file included:** `xhr/index.mjs` ✅
+
 Though, its [comment section](https://github.com/evanw/esbuild/blob/f4cec94deaa61e5bb9bd3c0d14ad37ead1d8ca55/internal/resolver/resolver.go#L26-L33) references to an unresolved webpack issue ([webpack/webpack#4674](https://github.com/webpack/webpack/issues/4674)) as the guidance for the implementation - that has changed direction already. esbuild might then eventually move towards the latest webpack implementation and fail on this aspect as others do.
 
 ## Using `rollup`
@@ -106,17 +106,16 @@ npm install
 npm start
 ```
 
-**ERROR**
-
-> Not sure if I've configured this properly (??)
-
-Can't resolve the module. Ask to treat as external dependency.
+**file included:** `node/index.mjs` ❌
 
 ```
+(!) Plugin node-resolve: preferring built-in module 'https' over local alternative at 'https', pass 'preferBuiltins: false' to disable this behavior or 'preferBuiltins: true' to disable this warning
+(!) Plugin node-resolve: preferring built-in module 'http' over local alternative at 'http', pass 'preferBuiltins: false' to disable this behavior or 'preferBuiltins: true' to disable this warning
+(!) Plugin node-resolve: preferring built-in module 'url' over local alternative at 'url', pass 'preferBuiltins: false' to disable this behavior or 'preferBuiltins: true' to disable this warning
 (!) Unresolved dependencies
 https://rollupjs.org/guide/en/#warning-treating-module-as-external-dependency
-httpie (imported by src/index.js)
-(!) Missing global variable name
-Use output.globals to specify browser global variable names corresponding to external modules
-httpie (guessing 'httpie')
+https (imported by node_modules/httpie/node/index.mjs)
+http (imported by node_modules/httpie/node/index.mjs)
+url (imported by node_modules/httpie/node/index.mjs)
+created output in 223ms
 ```
